@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_market/features/onboarding_veiw/presentation/widget/item_page_view.dart';
 
-class customPageView extends StatelessWidget {
-  const customPageView({super.key});
-
+class CustomPageView extends StatelessWidget {
+  const CustomPageView({super.key, this.pageController});
+  final PageController? pageController;
   @override
   Widget build(BuildContext context) {
     return PageView(
+      controller: pageController,
       children: const [
         ItemPageView(
           image: 'assets/images/Group1.png',

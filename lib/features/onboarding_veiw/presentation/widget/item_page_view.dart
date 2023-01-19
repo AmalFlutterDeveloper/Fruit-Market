@@ -18,12 +18,12 @@ class ItemPageView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const VerticalSpace(value: 22),
+        const VerticalSpace(value: 18),
         SizedBox(
           height: SizeConfig.defaultSize! * 25,
           child: Image.asset(image),
         ),
-        const VerticalSpace(value: 5),
+        const VerticalSpace(value: 2.5),
         Text(
           title,
           style: GoogleFonts.poppins(
@@ -31,11 +31,13 @@ class ItemPageView extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
-        const VerticalSpace(value: 2.5),
+        const VerticalSpace(value: 1),
         Text(
           subtitle,
-          style:
-              GoogleFonts.poppins(fontSize: 15, color: const Color(0xff78787C)),
+          style: GoogleFonts.poppins(
+              fontSize: 15,
+              color: const Color(0xff78787C),
+              fontWeight: FontWeight.bold),
         ),
       ],
     );
